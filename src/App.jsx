@@ -3,7 +3,6 @@ import { Routes , Route , Navigate} from 'react-router-dom'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import AdminDashboard from './pages/AdminDashboard'
-import PrivateRoutes from './utils/privateRoutes'
 import RoleBasedRoutes from './utils/RoleBasedRoutes'
 import AdminSummary from './components/dashboard/AdminSummary'
 
@@ -19,6 +18,7 @@ import LeaveList from './components/leave/LeaveList.jsx'
 import LeaveForm from './components/leave/LeaveForm.jsx'
 import LeaveDetail from './components/leave/LeaveDetail.jsx'
 import AdminLeaveTable from './components/leave/AdminLeaveTable.jsx'
+import UserPrivateRoute from './utils/UserPrivateRoute.jsx'
 
 
 const App = () => {
@@ -28,11 +28,11 @@ const App = () => {
         <Route path='/login' element={<Login/>} ></Route>
         {/* <Route path='/employee-dashboard' element={<Dashboard/>} ></Route> */}
         <Route path='/admin-dashboard' element={
-          <PrivateRoutes>
+          <UserPrivateRoute>
             <RoleBasedRoutes requiredRole={['admin']}>
             <AdminDashboard/>
             </RoleBasedRoutes>
-          </PrivateRoutes>
+          </UserPrivateRoute>
             
           
           }>
@@ -56,11 +56,11 @@ const App = () => {
         <Route 
           path='/employee-dashboard'
           element={
-            <PrivateRoutes>
+            <UserPrivateRoute>
               <RoleBasedRoutes requiredRole={["admin" , 'employee']}>
               <Dashboard/>
               </RoleBasedRoutes>
-            </PrivateRoutes>
+            </UserPrivateRoute>
               
           }>
             <Route index element={<EmployeeSummary/>}></Route>
