@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { useAuth } from '../../context/authContext.jsx';
+import { useAuth } from '../../context/UserAuthContext.jsx';
 import axios from 'axios';
 
 const LeaveList = () => {

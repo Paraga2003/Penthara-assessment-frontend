@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useAuth } from '../context/authContext.jsx'
+import { useAuth } from '../context/UserAuthContext.jsx'
 import { Outlet, useNavigate } from 'react-router-dom';
 import AdminSidebar from '../components/dashboard/AdminSidebar.jsx';
 import Navbar from '../components/dashboard/Navbar.jsx';

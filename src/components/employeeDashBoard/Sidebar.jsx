@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { FaHistory, FaTachometerAlt, FaWpforms } from "react-icons/fa";
-import { useAuth } from '../../context/authContext';
+import { useAuth } from '../../context/UserAuthContext';
 
 
 const Sidebar = () => {
