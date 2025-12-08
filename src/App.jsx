@@ -65,8 +65,7 @@ const App = () => {
           }>
             <Route index element={<EmployeeSummary/>}></Route>
             
-            {/* <Route path='/employee-dashboard/leaveForm' element={<LeaveForm/>}></Route>
-            <Route path='/employee-dashboard/leaveHistory/:id' element={<LeaveList/>}></Route> */}
+            
             <Route path='/employee-dashboard/leaveForm' element={<LeaveForm/>}></Route>
             <Route path='/employee-dashboard/leaveHistory/:id' element={<LeaveList/>}></Route>
 

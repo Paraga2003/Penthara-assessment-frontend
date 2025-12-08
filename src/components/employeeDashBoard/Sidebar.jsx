@@ -7,11 +7,6 @@ import { useAuth } from '../../context/UserAuthContext';
 
 const Sidebar = () => {
   const { user, loading } = useAuth();
-  
-
-  // Avoid crashing before user is loaded
-  // if (loading) return null; 
-  // if (!user) return null;   // (Optional) redirect instead if needed
   const userId = user._id || user.id
 
   return (

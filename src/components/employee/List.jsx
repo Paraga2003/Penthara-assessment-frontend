@@ -2,8 +2,7 @@ import React, { useState , useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { EmployeeButtons } from '../../utils/EmployeeHelper';
 import axios from 'axios';
-import DataTable from 'react-data-table-component';
-import { columns } from '../../utils/DepartmentHelper';
+
 
 const List = () => {
   const [employees , setEmployees] = useState([]);
@@ -68,11 +67,6 @@ const List = () => {
                 Add New Employee
               </Link>
             </div>
-            {/* <div>
-              <DataTable
-              columns={columns} data={employees} progressPending={loading}
-              />  
-            </div> */}
             <table className="min-w-full border mt-6 text-center">
                     <thead className="bg-gray-100">
                       <tr>

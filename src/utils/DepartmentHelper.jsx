@@ -1,46 +1,9 @@
-// // utils/DepartmentHelper.jsx
-// import React from "react";
 
-// export const DepartmentButtons = ({ row }) => {
-//   return (
-//     <div>
-//       <button
-//         className="text-blue-600 mr-2"
-//         onClick={() => console.log("Edit", row._id)}
-//       >
-//         Edit
-//       </button>
-
-//       <button
-//         className="text-red-600"
-//         onClick={() => console.log("Delete", row._id)}
-//       >
-//         Delete
-//       </button>
-//     </div>
-//   );
-// };
-
-// export const columns = [
-//   {
-//     name: "S No",
-//     selector: (row) => row.sno,
-//   },
-//   {
-//     name: "Department Name",
-//     selector: (row) => row.dep_name,
-//   },
-//   {
-//     name: "Action",
-//     cell: (row) => row.action || <DepartmentButtons row={row} />,
-//   },
-// ];
-// utils/DepartmentHelper.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-// Action buttons for each row
+
 export const DepartmentButtons = ({ Id , onDepartmentDelete }) => {
   const navigate = useNavigate()
   const  handleDelete = async (id) => {
