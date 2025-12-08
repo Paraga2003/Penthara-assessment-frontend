@@ -57,7 +57,7 @@ const Edit = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/employee/edit/${id}`,
+        `https://penthara-assessment-backend.vercel.app/api/employee/edit/${id}`,
         employee,
         {
           headers: {

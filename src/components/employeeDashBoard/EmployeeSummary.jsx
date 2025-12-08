@@ -8,7 +8,7 @@ const EmployeeSummary = () => {
     useEffect(()=>{
       const  fetchSummary = async () => {
         try {
-          const res = await axios.get('http://localhost:3000/api/dashboard/employee/summary',{
+          const res = await axios.get('https://penthara-assessment-backend.vercel.app/api/dashboard/employee/summary',{
             headers :{
               "Authorization": `Bearer ${localStorage.getItem('token')}`
             }

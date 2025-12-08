@@ -11,7 +11,7 @@ export const DepartmentButtons = ({ Id , onDepartmentDelete }) => {
     if(confirm){
     try {
             const token = localStorage.getItem("token");
-            const response = await axios.delete(`http://localhost:3000/api/departments/${id}`, {
+            const response = await axios.delete(`https://penthara-assessment-backend.vercel.app/api/departments/${id}`, {
               headers: { Authorization: `Bearer ${token}` },
             });
             

@@ -14,7 +14,7 @@ const LeaveForm = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.post(`http://localhost:3000/api/leave/add`,leave, {
+      const response = await axios.post(`https://penthara-assessment-backend.vercel.app/api/leave/add`,leave, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if(response.data.success){
@@ -31,7 +31,7 @@ const LeaveForm = () => {
     useEffect(()=>{
       const  fetchSummary = async () => {
         try {
-          const res = await axios.get('http://localhost:3000/api/dashboard/employee/summary',{
+          const res = await axios.get('https://penthara-assessment-backend.vercel.app/api/dashboard/employee/summary',{
             headers :{
               "Authorization": `Bearer ${localStorage.getItem('token')}`
             }
