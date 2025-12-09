@@ -12,7 +12,7 @@ const LeaveDetail = () => {
     const fetchLeave = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`http://localhost:3000/api/leave/detail/${id}`, {
+        const response = await axios.get(`https://penthara-assessment-backend.vercel.app/api/leave/detail/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         
