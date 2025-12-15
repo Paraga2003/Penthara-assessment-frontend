@@ -26,7 +26,7 @@ const Edit = () => {
 
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`https://penthara-assessment-backend.vercel.app/api/employee/${id}`, {
+        const response = await axios.get(`http://localhost:3000/api/employee/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log(response.data)
@@ -57,7 +57,7 @@ const Edit = () => {
 
     try {
       const response = await axios.put(
-        `https://penthara-assessment-backend.vercel.app/api/employee/edit/${id}`,
+        `http://localhost:3000/api/employee/edit/${id}`,
         employee,
         {
           headers: {

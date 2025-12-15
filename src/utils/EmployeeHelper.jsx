@@ -40,7 +40,7 @@ export const columns = [
   
   try {
     const token = localStorage.getItem("token");
-    const response = await axios.get("https://penthara-assessment-backend.vercel.app/api/departments", {
+    const response = await axios.get("http://localhost:3000/api/departments", {
       headers: { Authorization: `Bearer ${token}` },
     });
     if(response.data.success){

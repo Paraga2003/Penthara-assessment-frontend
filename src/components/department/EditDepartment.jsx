@@ -15,7 +15,7 @@ const EditDepartment = () => {
   const handleSubmit = async (e)=>{
     e.preventDefault();
     try {
-          const response = await axios.put(`https://penthara-assessment-backend.vercel.app/api/departments/${id}`, department , {
+          const response = await axios.put(`http://localhost:3000/api/departments/${id}`, department , {
             headers:{
               "Authorization": `Bearer ${localStorage.getItem('token')}`
             }

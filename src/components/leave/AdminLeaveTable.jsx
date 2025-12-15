@@ -8,7 +8,7 @@ const AdminLeaveTable = () => {
   const fetchLeaves = async () =>{
     try {
               const token = localStorage.getItem("token");
-              const response = await axios.get("https://penthara-assessment-backend.vercel.app/api/leave", {
+              const response = await axios.get("http://localhost:3000/api/leave", {
                 headers: { Authorization: `Bearer ${token}` },
               });
               if(response.data.success){
@@ -50,7 +50,7 @@ const AdminLeaveTable = () => {
   
   return (
     <>{filteredLeaves ? (
-    <div className='p-6'>
+    <div className='min-h-screen bg-gray-100 p-6'>
       <div className='text-center'>
                 <h3 className='text-2xl font-bold'>
                     Manage Leaves

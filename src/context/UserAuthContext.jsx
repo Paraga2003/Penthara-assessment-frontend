@@ -17,7 +17,7 @@ const UserAuthContext = ({children}) => {
         try{
           const token = localStorage.getItem('token');
           if(token){
-          const res = await axios.get('https://penthara-assessment-backend.vercel.app/api/auth/verify' , {
+          const res = await axios.get('http://localhost:3000/api/auth/verify' , {
             headers: {
               "Authorization": `Bearer ${token}`
             }
